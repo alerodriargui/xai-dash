@@ -6,29 +6,30 @@ import matplotlib.pyplot as plt
 # -------------------------------------------------
 example = {
     "customer_id": "CUST_001",
-    "monthly_charges": 89.5,
-    "tenure": 2,
-    "total_charges": 180.0,
-    "internet_service": "120 hours",
-    "contract": "Month-to-Month",
+    "monthly_charges": 75.0,          # relativamente alto
+    "tenure": 3,                       # poco tiempo con la compañía
+    "total_charges": 220.0,            # bajo, consistente con tenure
+    "internet_service": "80 hours",    # consumo medio
+    "contract": "Month-to-Month",      # contrato corto → más riesgo
     "payment_method": "Credit Card",
-    "prediction": 0.91,
+    "prediction": 0.78,                # 78% de riesgo de churn, coherente con perfil
     "positive": {
-        "High Monthly Charges": 0.40,
-        "Average Monthly Usage": 0.33,
-        "Credit Card": 0.18
+        "Month-to-Month Contract": 0.2,   
+        "High Monthly Charges": 0.25,     
+        "Support Tickets": 0.4
     },
     "negative": {
-        "Low Tenure": -0.25,
-        "Few Past Orders": -0.12,
-        "No Premium Add-ons": -0.08
+        "Tenure": -0.10,   # disminuye riesgo un poco
+        "Late Payments": -0.08,
+        "Premium Services": -0.05
     },
     "support_tickets_last_3mo": 5,
     "premium_services": 0,
-    "late_payments": 1,
-    "last_support_contact_days": 7,
-    "num_products": 2
+    "late_payments": 0,
+    "last_support_contact_days": 10,
+    "num_products": 1
 }
+
 
 # -------------------------------------------------
 # Layout principal
